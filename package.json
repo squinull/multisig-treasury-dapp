@@ -1,0 +1,32 @@
+{
+  "name": "multisig-treasury-dapp",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "node": "npx hardhat node",
+    "compile": "npx hardhat compile",
+    "deploy": "npx hardhat run scripts/deploy.js --network localhost",
+    "test": "npx hardhat test",
+    "gas": "REPORT_GAS=true npx hardhat test",
+    "coverage": "npx hardhat coverage",
+    "serve": "npx serve frontend",
+    "submit:eth": "npx hardhat run scripts/submit_eth.js --network localhost",
+    "submit:erc20": "npx hardhat run scripts/submit_erc20.js --network localhost",
+    "execute": "npx hardhat run scripts/execute.js --network localhost",
+    "fund": "npx hardhat run scripts/fund_wallet.js --network localhost",
+    "relay:server": "node server/index.js"
+  },
+  "devDependencies": {
+    "hardhat": "^2.22.6",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "solidity-coverage": "^0.8.7",
+    "hardhat-gas-reporter": "^1.0.10",
+    "@openzeppelin/contracts": "^5.0.2",
+    "dotenv": "^16.4.5"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5",
+    "morgan": "^1.10.0"
+  }
+}
